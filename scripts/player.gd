@@ -1,27 +1,15 @@
 extends CharacterBody2D
 
-const max_speed = 200
-const acceleration = 8000
+@export var max_speed: float = 20
+@export var acceleration: float = 5
 
-func _ready() -> void:
-	pass
-	
-func _process(delta: float) -> void:
-	pass
-	
-func get_input():
-	var hMove = Input.get_axis("move_left","move_right")
-	if hMove != 0:
-		velocity.x += hMove * acceleration
-		velocity.x = clamp(velocity.x, -max_speed, max_speed)
-	else:
-		velocity.x = 0
-		
-	velocity.y += get_gravity().y
-	
-	print(velocity.x)
+func get_input() -> int:
+	return Input.get_axis("move_left","move_right")
 
 func _physics_process(delta: float) -> void:
-	get_input()
+	if not is_on_floor():
+		velocity.y += get_gravity().y
+	var horizontal = get_input()
+	#Calcula a aceleração
+	velocity.x = lerp(velocity.x, horizontal * max_speed * 100, delta * acceleration)
 	move_and_slide()
-	pass

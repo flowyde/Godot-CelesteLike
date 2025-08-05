@@ -18,7 +18,6 @@ region_rect = Rect2(-1.197, -1.818, 173.95, 128.531)
 [node name="StaticBody2D" type="StaticBody2D" parent="Icon"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/StaticBody2D"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0wfyh")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
