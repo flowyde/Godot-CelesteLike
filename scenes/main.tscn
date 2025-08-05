@@ -21,4 +21,4 @@ region_rect = Rect2(-1.197, -1.818, 173.95, 128.531)
 shape = SubResource("RectangleShape2D_0wfyh")
 
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(-674, -404)
+position = Vector2(-635, -199)
