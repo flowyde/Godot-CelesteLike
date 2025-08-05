@@ -1,6 +1,5 @@
 [gd_scene load_steps=5 format=4 uid="uid://bsqv73thcohgl"]
 
-[ext_resource type="Texture2D" uid="uid://bt0pi53i7e8m4" path="res://icon.svg" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://7res17xqksnv" path="res://scenes/player.tscn" id="2_0wfyh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
