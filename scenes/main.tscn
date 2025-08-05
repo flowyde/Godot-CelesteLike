@@ -1,24 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsqv73thcohgl"]
+[gd_scene load_steps=3 format=3 uid="uid://bsqv73thcohgl"]
 
-[ext_resource type="Texture2D" uid="uid://bt0pi53i7e8m4" path="res://icon.svg" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://7res17xqksnv" path="res://scenes/player.tscn" id="2_0wfyh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
-size = Vector2(128.145, 126)
+[ext_resource type="PackedScene" uid="uid://rrxeeojvm13v" path="res://scenes/colisao.tscn" id="2_sugp2"]
 
 [node name="main" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 2
-scale = Vector2(17.3398, 1)
-texture = ExtResource("1_o5qli")
-region_rect = Rect2(-1.197, -1.818, 173.95, 128.531)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Icon"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/StaticBody2D"]
-shape = SubResource("RectangleShape2D_0wfyh")
-
 [node name="player" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(-635, -199)
+jump_time_peak = 0.4
+jump_time_fall = 0.3
+
+[node name="Icon" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(-648.129, 67.7892)
+scale = Vector2(2.45514, 3.16858)
+
+[node name="Icon2" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(-231, -152)
+scale = Vector2(1.17052, 1.8125)
+
+[node name="Icon3" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(173.086, -52)
+scale = Vector2(2.70177, 1)
+
+[node name="Icon4" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(508, 62)
+rotation = -0.589266
